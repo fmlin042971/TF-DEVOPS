@@ -31,21 +31,15 @@ Pipeline Deployment:
   
   - Create a **Terraform Cloud organization** and a **workspace** for storing Terraform state and environment variables.
 
-2. **Azure DevOps Repository**
-  
-  - Host **both** Terraform code (for infrastructure) and Python Function App code in a single or multi-folder repo, ensuring version control and easy collaboration.
-
-3. **Azure Service Principal**
-  
-  - In Azure, create a **service principal** with the right permissions.
-  - Configure a **service connection** in Azure DevOps, enabling secure pipeline access to your Azure resources.
-
-4. **Local Workspace**
+2. **Local Workspace**
   
   - Organize local directories:
     - **`terraform/`** for IaC code
     - **`function_app/`** for the Python Function code
-  - Set up Python environment: 3.10 
+  - Set up Python environment: 3.10
+  - Install Azure CLI
+  - Install Azure Function locally (for local testing, and run deployment command)
+  - Install Terraform locally 
   
   Deploy IaC through Terraform
   - terraform login
@@ -58,6 +52,15 @@ Pipeline Deployment:
   - cd .\function_app\
   - az login --use-device-code
   - func azure functionapp publish fa042971 --python
+
+3. **Azure DevOps Repository**
+  
+  - Host **both** Terraform code (for infrastructure) and Python Function App code in a single or multi-folder repo, ensuring version control and easy collaboration.
+
+4. **Azure Service Principal**
+  
+  - In Azure, create a **service principal** with the right permissions.
+  - Configure a **service connection** in Azure DevOps, enabling secure pipeline access to your Azure resources.
 
 5. **Azure DevOps Pipeline**
   
