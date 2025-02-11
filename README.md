@@ -30,6 +30,8 @@ Pipeline Deployment:
 1. **Terraform Cloud (app.terraform.io)**
   
   - Create a **Terraform Cloud organization** and a **workspace** for storing Terraform state and environment variables.
+  - Store States
+  - Store Environment Variables for Azure Subscription & Login token generated  
 
 2. **Local Workspace**
   
