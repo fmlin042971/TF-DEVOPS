@@ -7,6 +7,7 @@ __pycache__/
 .env/
 venv/
 env/
+README.md
 
 # Function App local settings
 local.settings.json
