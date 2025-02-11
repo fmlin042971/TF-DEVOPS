@@ -57,6 +57,13 @@ Pipeline Deployment:
   - In Azure, create a **service principal** with the right permissions.
   - Configure a **service connection** in Azure DevOps, enabling secure pipeline access to your Azure resources.
 
+Create Service Principle: 
+  - az ad sp create-for-rbac --name "ADO-Terraform-SP" --role Contributor --scopes /subscriptions/<YourSubscriptionID> --sdk-auth
+
+List all  Service Principle: 
+  - Get-AzADServicePrincipal
+
+
 5. **Azure DevOps Pipeline**
   
   - Create a pipeline that:
