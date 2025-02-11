@@ -43,7 +43,7 @@ Pipeline Deployment:
   - terraform destroy -auto-approve
   - terraform apply -auto-approve
 
-  Deploy the application to  
+  Deploy the python application to Function App  
   - cd .\function_app\
   - az login --use-device-code
   - func azure functionapp publish fa042971 --python
