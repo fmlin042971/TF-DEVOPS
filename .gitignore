@@ -1,0 +1,34 @@
+# Byte-compiled / cached
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+.env/
+venv/
+env/
+
+# Function App local settings
+local.settings.json
+
+# Pip dependencies
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.plan
+
+# VSCode and workspace settings
+.vscode/
+*.code-workspace
+
+# Logs
+logs/
+*.log
+
+# Ignore .gitignore itself
+!.gitignore
