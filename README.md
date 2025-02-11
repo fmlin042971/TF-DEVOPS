@@ -45,14 +45,21 @@ Pipeline Deployment:
   - Organize local directories:
     - **`terraform/`** for IaC code
     - **`function_app/`** for the Python Function code
-  - Set up Python environment for local development and testing.
-
-5. **Local Testing (Terraform)**
+  - Set up Python environment: 3.10 
   
-  - Run `terraform init/plan/apply` from your local machine, referencing **Terraform Cloud** as the backend.
-  - Validate that you can provision and destroy the Azure Function App and any related resources successfully.
+  Deploy IaC through Terraform
+  - terraform login
+  - terraform init
+  - terraform plan
+  - terraform destroy -auto-approve
+  - terraform apply -auto-approve
 
-6. **Azure DevOps Pipeline**
+  Deploy the application to  
+  - cd .\function_app\
+  - az login --use-device-code
+  - func azure functionapp publish fa042971 --python
+
+5. **Azure DevOps Pipeline**
   
   - Create a pipeline that:
     1. **Checks out** the repo.
